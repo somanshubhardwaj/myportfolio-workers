@@ -4,12 +4,15 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
     "db:generate": "drizzle-kit generate --dialect=postgresql --schema=./src/db/schema.ts",
-    "db:migrate": "tsx ./src/db/migrate.ts"
+    "db:migrate": "tsx ./src/db/migrate.ts",
+    "generate-docs": "tsx ./src/swagger.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
     "drizzle-orm": "^0.38.3",
-    "hono": "^4.6.15"
+    "hono": "^4.6.15",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241218.0",
