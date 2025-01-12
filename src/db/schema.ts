@@ -8,3 +8,10 @@ export const projects = pgTable("projects", {
   href: text("href"),
   git: text("git"),
 });
+
+export const contactSubmissions = pgTable("contact_submissions", {
+  id: serial("id").primaryKey(),
+  name: text("name"),
+  email: text("email"),
+  message: text("message"),
+});

@@ -6,3 +6,10 @@ CREATE TABLE "projects" (
 	"href" text,
 	"git" text
 );
+
+CREATE TABLE "contact_submissions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"name" text,
+	"email" text,
+	"message" text
+);
