@@ -2,6 +2,7 @@ import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
 import { Hono } from "hono";
 import { projects } from "./db/schema";
+import { setupSwagger } from "./swagger";
 
 export type Env = {
   DATABASE_URL: string;
@@ -20,5 +21,7 @@ app.get("/projects", async (c) => {
   const allProjects = await db.select().from(projects);
   return c.json(allProjects);
 });
+
+setupSwagger(app);
 
 export default app;
